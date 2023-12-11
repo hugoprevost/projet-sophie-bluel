@@ -186,3 +186,25 @@ footer nav ul {
 	margin: 2em
 }
 
+.filtre{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.btn-filtre{
+	padding: 10px 20px;
+	margin: 0px 10px;
+	border-radius: 50px;
+	background-color: white;
+	border: 1px solid #1D6154;
+	color: #1D6154;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	cursor: pointer;
+}
+.btn-filtre:hover{
+	background-color: #1D6154;
+	color: white;
+}
