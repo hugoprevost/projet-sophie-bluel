@@ -204,6 +204,18 @@ footer nav ul {
 	font-weight: 700;
 	cursor: pointer;
 }
+.btn-filtre-selection{
+	padding: 10px 20px;
+	margin: 0px 10px;
+	border-radius: 50px;
+	background-color: #1D6154;
+	border: 1px solid #1D6154;
+	color: white;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	cursor: pointer;
+}
 .btn-filtre:hover{
 	background-color: #1D6154;
 	color: white;
