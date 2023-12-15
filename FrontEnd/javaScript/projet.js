@@ -26,10 +26,6 @@ fetch('http://localhost:5678/api/works')
     });
   });
 
-  //let baliseBtn = document.getElementById("tous");
-  //baliseBtn.classList.add("btn-filtre-selection")
-  //baliseBtn.classList.remove("btn-filtre")
-
 // gestion des filtres
 
 // bouton tous
@@ -139,4 +135,24 @@ function btnHotels(){
 var bouton = document.getElementById('hotels');
 bouton.addEventListener('click',btnHotels);
 
+// Vérification connexion
+
+const connecte = document.getElementById("connexion")
+const nonConnecte = document.getElementById("horsConnexion")
+
+if (JSON.parse(sessionStorage.getItem("isConnected"))) {
+  connecte.style.display = 'none'
+  nonConnecte.style.display = 'block'
     
+} else {
+  connecte.style.display = 'block'
+  nonConnecte.style.display = 'none'
+}
+
+// Suppression du status de connexion 
+nonConnecte.addEventListener("click", (deconnexion) => {
+  deconnexion.preventDefault();
+  sessionStorage.removeItem("Token");
+  sessionStorage.removeItem("isConnected");
+  window.location.replace("index.html");
+});
