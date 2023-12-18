@@ -139,14 +139,17 @@ bouton.addEventListener('click',btnHotels);
 
 const connecte = document.getElementById("connexion")
 const nonConnecte = document.getElementById("horsConnexion")
+const edition = document.getElementById("edition")
 
 if (JSON.parse(sessionStorage.getItem("isConnected"))) {
   connecte.style.display = 'none'
   nonConnecte.style.display = 'block'
+  edition.style.display ='flex'
     
 } else {
   connecte.style.display = 'block'
   nonConnecte.style.display = 'none'
+  edition.style.display ='none'
 }
 
 // Suppression du status de connexion 
