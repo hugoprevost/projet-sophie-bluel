@@ -2,17 +2,17 @@ const blockImage = document.querySelector(".gallery")
 
 function creationBlockProjet(work) {
   const projet = document.createElement('figure')
-  const projetCaption = document.createElement('figcaption')
+  const projetCap = document.createElement('figcaption')
   const projetImage = document.createElement('img')
 
   projetImage.src = work.imageUrl
   projetImage.alt = work.title
-  projetCaption.innerHTML = work.title
+  projetCap.innerHTML = work.title
   projet.setAttribute('data-id', work.id);
   projet.setAttribute('category-id', work.categoryId)
   
   projet.appendChild(projetImage)
-  projet.appendChild(projetCaption)    
+  projet.appendChild(projetCap)    
 
   return projet;
 }
@@ -139,17 +139,23 @@ bouton.addEventListener('click',btnHotels);
 
 const connecte = document.getElementById("connexion")
 const nonConnecte = document.getElementById("horsConnexion")
-const edition = document.getElementById("edition")
+const modeEdition = document.getElementById("edition")
+const edition = document.getElementById("edition-portfolio-texte")
+const filtreEdition = document.getElementById("filtre")
 
 if (JSON.parse(sessionStorage.getItem("isConnected"))) {
   connecte.style.display = 'none'
   nonConnecte.style.display = 'block'
+  modeEdition.style.display ='flex'
   edition.style.display ='flex'
+  filtreEdition.style.display ='none'
     
 } else {
   connecte.style.display = 'block'
   nonConnecte.style.display = 'none'
+  modeEdition.style.display ='none'
   edition.style.display ='none'
+  filtreEdition.style.display ='flex'
 }
 
 // Suppression du status de connexion 

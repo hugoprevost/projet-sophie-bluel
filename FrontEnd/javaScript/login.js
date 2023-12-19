@@ -5,8 +5,8 @@ const infoConnexion = {
     envoyer: document.querySelector("#envoyer"),
  };
 
- let boutonLogin = infoConnexion.envoyer.addEventListener("click", (a) =>  {
-    a.preventDefault(); 
+ let boutonLogin = infoConnexion.envoyer.addEventListener("click", (connexion) =>  {
+    connexion.preventDefault(); 
 
     const chargeUtile = JSON.stringify({
         email: infoConnexion.email.value,

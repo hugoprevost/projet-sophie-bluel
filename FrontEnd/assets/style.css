@@ -62,30 +62,6 @@ section {
 	margin: 50px 0
 }
 
-#edition{
-	background-color: black;
-	height: 50px;
-	margin: 0px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#edition-logo{
-	display: flex;
-	align-items: baseline;
-}
-
-#edition-logo i{
-	color: white;
-	margin-right: 10px;
-	font-size: 1.1em;
-}
-
-#edition-logo p{
-	color: #FFFFFF;
-}
-
 h1{
 	display: flex;
 	flex-direction: column;
@@ -292,4 +268,50 @@ footer nav ul {
 	color: black;
 	text-decoration: underline;
 	text-align: center;
+}
+
+/* Edition */
+
+
+
+#edition{
+	background-color: black;
+	height: 50px;
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#edition-logo{
+	display: flex;
+	align-items: baseline;
+}
+
+#edition-logo i{
+	margin-right: 10px;
+}
+
+#edition-logo p{
+	color: #FFFFFF;
+}
+
+#edition-portfolio{
+	display: flex;
+	justify-content: center;
+	align-items:baseline;
+}
+
+#edition-portfolio-texte{
+	display: flex;
+	padding-left: 20px;
+	justify-content: center;
+}
+
+#edition-portfolio-texte i{
+	margin-right: 10px;
+}
+
+#edition-portfolio-texte p{
+	color: #000000;
 }
