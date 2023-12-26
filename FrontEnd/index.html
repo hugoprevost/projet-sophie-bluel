@@ -43,12 +43,47 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
+	<section id="ajout">
+		<div id="ajout-content">
+		  <h2>Galerie photo</h2>
+		  <div class="gallery-ajout"></div>
+		  <button id="fermerAjout"><i class="fa-solid fa-xmark"></i></button>
+		  <button type="button" id="new-photo">Ajouter une photo</button>
+		</div>
+		<div id="ajout-photo" style="display : none;">
+			<h2>Ajout photo</h2>
+			<form enctype="multipart/form-data" method="POST">
+				<div id="form-photo-div">
+					<i class="fa-regular fa-image" id="iModalImage" style="color: #c5c6c9;"></i>
+				    <label for="image" id="label-image">+ Ajouter une photo</label>
+				    <input type="file" name="image" id="image" style="display: none;">
+					<p>jpg,png : 4mo max</p>
+			    </div>
+				<div class="ajout-photo-input">
+				    <label for="title">Titre</label>
+				    <input type="text" name="title" id="ajout-photo-titre">
+			    </div>
+				<div class="ajout-photo-input" id="barre-grise">
+				    <label for="category">Catégorie</label>
+				    <select name="category" id="photo-category">
+						<option value="" selected></option>
+						<option value="1">Objets</option>
+						<option value="2">Appartements</option>
+						<option value="3">Hôtels et restaurants</option>
+					</select>
+			    </div>
+				<input type="submit" value="Valider" id="ajout-valider">
+			</form>
+			<button id="fermerAjout2"><i class="fa-solid fa-xmark"></i></button>
+			<button id="ajout-return"><i class="fa-solid fa-arrow-left"></i></button>
+		</div>
+	  </section>
 	<section id="portfolio">
 		<div id="edition-portfolio">
 			<h2>Mes Projets</h2>
 			<div id="edition-portfolio-texte">
 				<i class="fa-regular fa-pen-to-square" style="color: #000000;"></i>
-				<p>Mode édition</p>
+				<a href="#portfolio" id="modiferProjet" onclick="affichageAjout()">Mofifier</a>
 			</div>
 		</div>
 		<div class="filtre" id="filtre">
@@ -83,4 +118,5 @@
 </footer>
 </body>
 <script src="javaScript/projet.js"></script>
+<script src="Javascript/ajout.js"></script>
 </html>

@@ -270,9 +270,15 @@ footer nav ul {
 	text-align: center;
 }
 
+#messageErreur{
+	margin-top: 5px;
+	font-size: 1em;
+	color: red;
+	text-align: center;
+	display: none;
+}
+
 /* Edition */
-
-
 
 #edition{
 	background-color: black;
@@ -312,6 +318,254 @@ footer nav ul {
 	margin-right: 10px;
 }
 
-#edition-portfolio-texte p{
+#modiferProjet{
 	color: #000000;
+	text-decoration: none;
 }
+#modiferProjet:hover{
+	color: #1D6154;
+}
+
+/*Ajout new projet*/
+
+
+#ajout {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	
+  }
+  
+  #ajout-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 650px;
+	text-align: center;
+	position: relative;
+	max-height: 670px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  #ajout-content h2{
+	color: black;
+	margin-top: 20px;
+	font-weight: lighter;
+  }
+
+
+  #fermerAjout {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+  }
+  
+  #fermerAjout i {
+	font-size: 1.3em;
+	display: block;
+  }
+
+  .gallery-ajout {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-row-gap: 20px;
+	grid-column-gap: 10px;
+	margin: 40px 80px 0px 80px;
+	padding-bottom: 30px;
+	border-bottom: solid 2px #d0d0d0;
+  }
+
+  .gallery-ajout figure {
+    position: relative;
+	height: 135px;
+}
+  
+  .gallery-ajout img {
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  #new-photo{
+	font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #1D6154;
+    padding: 10px 25px 10px 25px;
+    width: 230px;
+    text-align: center;
+    border-radius: 60px;
+	border-width: 0px;
+    margin-top: 30px;
+	cursor: pointer;
+  }
+
+  #delete-gallery {
+	color: #e03232; 
+	background-color: transparent; 
+	border: none; 
+	padding: 0; 
+	font-size: inherit; 
+	font-family: inherit; 
+	cursor: pointer; 
+	margin-top: 20px;
+  }
+
+
+.gallery-ajout figure i {
+    position: absolute;
+    color: white;
+    top: 3px;
+    right: 3px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    padding: 4px;
+    background-color: black;
+    border: none;
+	border-radius: 5px;
+}
+
+/*modal form*/
+
+#ajout-photo {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 650px;
+	text-align: center;
+	position: relative;
+	max-height: 660px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  #ajout-photo h2{
+	color: black;
+	margin-top: 20px;
+	font-weight: lighter;
+  }
+
+  #ajout-return {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+  }
+
+  #ajout-return i {
+	font-size: 1.3em;
+	display: block;
+  }
+
+  #fermerAjout2 {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+  }
+
+  #fermerAjout2 i {
+	font-size: 1.3em;
+	display: block;
+  }
+
+  #ajout-photo form{
+	display: flex;
+	flex-direction: column;
+	padding: 30px 100px 30px 100px
+  }
+
+  #form-photo-div{
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	background-color: #e8f1f6;
+  }
+  #form-photo-div i{
+	font-size: 4.5em;
+  }
+
+  #label-image{
+	padding: 13px 30px 13px 30px;
+	background-color: #cbd6dc;
+	border-radius: 25px;
+	color: #376b89;
+	margin-top: 17px;
+	cursor: pointer;
+  }
+
+  #form-photo-div p {
+	font-size: 0.9em;
+	color: #575859;
+	margin-top: 7px;
+  }
+
+  .ajout-photo-input{
+	display: flex;
+	flex-direction: column;
+	margin-top: 25px;
+	align-items: start;
+  }
+
+  #photo-category, #ajout-photo-titre{
+	width: 100%;
+    height: 37px;
+    box-shadow: 0px 0px 15px rgb(233, 233, 228);
+    border-width: 0px;
+    margin-top: 10px;
+	padding-left: 13px;
+  }
+
+  #barre-grise{
+	padding-bottom: 45px;
+	border-bottom: solid 2px #d0d0d0;
+  }
+
+  #ajout-valider{
+	font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #6f717099;
+    padding: 10px 25px 10px 25px;
+    width: 230px;
+	border-width: 0px;
+    text-align: center;
+    border-radius: 60px;
+    margin-top: 30px;
+	cursor: pointer;
+  }
+
