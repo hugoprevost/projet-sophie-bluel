@@ -14,30 +14,30 @@ function creationBlockProjet(work) {
   projet.appendChild(projetImage)
   projet.appendChild(projetCap)    
 
-  return projet;
+  return projet
 }
 
 fetch('http://localhost:5678/api/works')
   .then((response) => response.json())
   .then((data) => {
     data.forEach((work) => {
-      const projet = creationBlockProjet(work);
-      blockImage.appendChild(projet);
-    });
-  });
+      const projet = creationBlockProjet(work)
+      blockImage.appendChild(projet)
+    })
+  })
 
 // gestion des filtres
 
 // bouton tous
 function btnTous(){
   //Display Objects//
-  let baliseBtnTous = document.getElementById("tous");
-  let baliseBtnObjets = document.getElementById("objets");
-  let baliseBtnAppartements = document.getElementById("appartements");
-  let baliseBtnHotels = document.getElementById("hotels");
-  const boutonTous = document.querySelectorAll('div.gallery figure');
+  let baliseBtnTous = document.getElementById("tous")
+  let baliseBtnObjets = document.getElementById("objets")
+  let baliseBtnAppartements = document.getElementById("appartements")
+  let baliseBtnHotels = document.getElementById("hotels")
+  const boutonTous = document.querySelectorAll('div.gallery figure')
   boutonTous.forEach((element) => {
-      element.style.display = 'block';
+      element.style.display = 'block'
       baliseBtnTous.classList.add("btn-filtre-selection")
       baliseBtnObjets.classList.add("btn-filtre")
       baliseBtnAppartements.classList.add("btn-filtre")
@@ -48,21 +48,21 @@ function btnTous(){
       baliseBtnHotels.classList.remove("btn-filtre-selection")
   });
 }
-var bouton = document.getElementById('tous');
-bouton.addEventListener('click',btnTous);
+var bouton = document.getElementById('tous')
+bouton.addEventListener('click',btnTous)
 
 // bouton objets
 function btnObjets(){
   //Display Objects//
-  const boutonObjets = document.querySelectorAll('div.gallery figure');
-  let baliseBtnTous = document.getElementById("tous");
-  let baliseBtnObjets = document.getElementById("objets");
-  let baliseBtnAppartements = document.getElementById("appartements");
-  let baliseBtnHotels = document.getElementById("hotels");
+  const boutonObjets = document.querySelectorAll('div.gallery figure')
+  let baliseBtnTous = document.getElementById("tous")
+  let baliseBtnObjets = document.getElementById("objets")
+  let baliseBtnAppartements = document.getElementById("appartements")
+  let baliseBtnHotels = document.getElementById("hotels")
   boutonObjets.forEach((element) => {
-    const categoryId = element.getAttribute('category-id');
+    const categoryId = element.getAttribute('category-id')
     if (categoryId === '1') {
-      element.style.display = 'block';
+      element.style.display = 'block'
       baliseBtnTous.classList.add("btn-filtre")
       baliseBtnObjets.classList.add("btn-filtre-selection")
       baliseBtnAppartements.classList.add("btn-filtre")
@@ -72,25 +72,25 @@ function btnObjets(){
       baliseBtnAppartements.classList.remove("btn-filtre-selection")
       baliseBtnHotels.classList.remove("btn-filtre-selection")
     } else {
-      element.style.display = 'none';
+      element.style.display = 'none'
     }
   });
 }
-var bouton = document.getElementById('objets');
-bouton.addEventListener('click',btnObjets);
+var bouton = document.getElementById('objets')
+bouton.addEventListener('click',btnObjets)
 
 // bouton appartements
 function btnAppartements(){
   //Display Objects//
-  let baliseBtnTous = document.getElementById("tous");
-  let baliseBtnObjets = document.getElementById("objets");
-  let baliseBtnAppartements = document.getElementById("appartements");
-  let baliseBtnHotels = document.getElementById("hotels");
-  const boutonAppartements = document.querySelectorAll('div.gallery figure');
+  let baliseBtnTous = document.getElementById("tous")
+  let baliseBtnObjets = document.getElementById("objets")
+  let baliseBtnAppartements = document.getElementById("appartements")
+  let baliseBtnHotels = document.getElementById("hotels")
+  const boutonAppartements = document.querySelectorAll('div.gallery figure')
   boutonAppartements.forEach((element) => {
-    const categoryId = element.getAttribute('category-id');
+    const categoryId = element.getAttribute('category-id')
     if (categoryId === '2') {
-      element.style.display = 'block';
+      element.style.display = 'block'
       baliseBtnTous.classList.add("btn-filtre")
       baliseBtnObjets.classList.add("btn-filtre")
       baliseBtnAppartements.classList.add("btn-filtre-selection")
@@ -100,25 +100,25 @@ function btnAppartements(){
       baliseBtnAppartements.classList.remove("btn-filtre")
       baliseBtnHotels.classList.remove("btn-filtre-selection")
     } else {
-      element.style.display = 'none';
+      element.style.display = 'none'
     }
   });
 }
-var bouton = document.getElementById('appartements');
-bouton.addEventListener('click',btnAppartements);
+var bouton = document.getElementById('appartements')
+bouton.addEventListener('click',btnAppartements)
 
 // bouton hotel
 function btnHotels(){
   //Display Objects//
-  let baliseBtnTous = document.getElementById("tous");
-  let baliseBtnObjets = document.getElementById("objets");
-  let baliseBtnAppartements = document.getElementById("appartements");
-  let baliseBtnHotels = document.getElementById("hotels");
-  const boutonHotel = document.querySelectorAll('div.gallery figure');
+  let baliseBtnTous = document.getElementById("tous")
+  let baliseBtnObjets = document.getElementById("objets")
+  let baliseBtnAppartements = document.getElementById("appartements")
+  let baliseBtnHotels = document.getElementById("hotels")
+  const boutonHotel = document.querySelectorAll('div.gallery figure')
   boutonHotel.forEach((element) => {
-    const categoryId = element.getAttribute('category-id');
+    const categoryId = element.getAttribute('category-id')
     if (categoryId === '3') {
-      element.style.display = 'block';
+      element.style.display = 'block'
       baliseBtnTous.classList.add("btn-filtre")
       baliseBtnObjets.classList.add("btn-filtre")
       baliseBtnAppartements.classList.add("btn-filtre")
@@ -128,12 +128,12 @@ function btnHotels(){
       baliseBtnAppartements.classList.remove("btn-filtre-selection")
       baliseBtnHotels.classList.remove("btn-filtre")
     } else {
-      element.style.display = 'none';
+      element.style.display = 'none'
     }
   });
 }
-var bouton = document.getElementById('hotels');
-bouton.addEventListener('click',btnHotels);
+var bouton = document.getElementById('hotels')
+bouton.addEventListener('click',btnHotels)
 
 // Vérification connexion
 
@@ -160,8 +160,8 @@ if (JSON.parse(sessionStorage.getItem("isConnected"))) {
 
 // Suppression du status de connexion 
 nonConnecte.addEventListener("click", (deconnexion) => {
-  deconnexion.preventDefault();
-  sessionStorage.removeItem("Token");
-  sessionStorage.removeItem("isConnected");
-  window.location.replace("index.html");
-});
+  deconnexion.preventDefault()
+  sessionStorage.removeItem("Token")
+  sessionStorage.removeItem("isConnected")
+  window.location.replace("index.html")
+})

@@ -3,10 +3,10 @@ const infoConnexion = {
     email: document.querySelector("#email"),
     motDePasse: document.querySelector("#pass"),
     envoyer: document.querySelector("#envoyer"),
- };
- let messageErreur = document.getElementById("messageErreur");
+ }
+ let messageErreur = document.getElementById("messageErreur")
  let boutonLogin = infoConnexion.envoyer.addEventListener("click", (connexion) =>  {
-    connexion.preventDefault(); 
+    connexion.preventDefault()
 
     const chargeUtile = JSON.stringify({
         email: infoConnexion.email.value,
@@ -32,5 +32,4 @@ const infoConnexion = {
                 window.location.replace("index.html");
             }
         })
-
  })

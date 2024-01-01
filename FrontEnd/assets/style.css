@@ -326,7 +326,7 @@ footer nav ul {
 	color: #1D6154;
 }
 
-/*Ajout new projet*/
+/*Ajout nouveau projet*/
 
 
 #ajout {
@@ -341,7 +341,7 @@ footer nav ul {
 	
   }
   
-  #ajout-content {
+  #ajout-contenu {
 	background-color: #fff;
 	margin: 15% auto;
 	padding: 20px;
@@ -357,12 +357,11 @@ footer nav ul {
 	align-items: center;
   }
 
-  #ajout-content h2{
+  #ajout-contenu h2{
 	color: black;
 	margin-top: 20px;
 	font-weight: lighter;
   }
-
 
   #fermerAjout {
 	position: absolute;
@@ -381,7 +380,7 @@ footer nav ul {
 	display: block;
   }
 
-  .gallery-ajout {
+  .gallerie-ajout {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, auto);
@@ -392,18 +391,18 @@ footer nav ul {
 	border-bottom: solid 2px #d0d0d0;
   }
 
-  .gallery-ajout figure {
+  .gallerie-ajout figure {
     position: relative;
 	height: 135px;
 }
   
-  .gallery-ajout img {
+  .gallerie-ajout img {
 	max-width: 100%;
 	height: 100%;
 	object-fit: cover;
   }
 
-  #new-photo{
+  #nouvelle-photo{
 	font-family: 'Syne';
     font-weight: 700;
     color: white;
@@ -417,19 +416,7 @@ footer nav ul {
 	cursor: pointer;
   }
 
-  #delete-gallery {
-	color: #e03232; 
-	background-color: transparent; 
-	border: none; 
-	padding: 0; 
-	font-size: inherit; 
-	font-family: inherit; 
-	cursor: pointer; 
-	margin-top: 20px;
-  }
-
-
-.gallery-ajout figure i {
+.gallerie-ajout figure i {
     position: absolute;
     color: white;
     top: 3px;
@@ -443,7 +430,7 @@ footer nav ul {
 	border-radius: 5px;
 }
 
-/*modal form*/
+/*Ajout Projet*/
 
 #ajout-photo {
 	background-color: #fff;
@@ -467,7 +454,7 @@ footer nav ul {
 	font-weight: lighter;
   }
 
-  #ajout-return {
+  #ajout-retour {
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -479,7 +466,7 @@ footer nav ul {
 	padding: 0;
   }
 
-  #ajout-return i {
+  #ajout-retour i {
 	font-size: 1.3em;
 	display: block;
   }
@@ -507,7 +494,7 @@ footer nav ul {
 	padding: 30px 100px 30px 100px
   }
 
-  #form-photo-div{
+  #formulaire-photo{
 	height: 180px;
 	display: flex;
 	flex-direction: column;
@@ -515,11 +502,11 @@ footer nav ul {
     align-items: center;
 	background-color: #e8f1f6;
   }
-  #form-photo-div i{
+  #formulaire-photo i{
 	font-size: 4.5em;
   }
 
-  #label-image{
+  #ajout-image{
 	padding: 13px 30px 13px 30px;
 	background-color: #cbd6dc;
 	border-radius: 25px;
@@ -528,7 +515,7 @@ footer nav ul {
 	cursor: pointer;
   }
 
-  #form-photo-div p {
+  #formulaire-photo p {
 	font-size: 0.9em;
 	color: #575859;
 	margin-top: 7px;
@@ -541,7 +528,7 @@ footer nav ul {
 	align-items: start;
   }
 
-  #photo-category, #ajout-photo-titre{
+  #photo-categori, #photo-titre{
 	width: 100%;
     height: 37px;
     box-shadow: 0px 0px 15px rgb(233, 233, 228);
@@ -550,7 +537,7 @@ footer nav ul {
 	padding-left: 13px;
   }
 
-  #barre-grise{
+  #barre{
 	padding-bottom: 45px;
 	border-bottom: solid 2px #d0d0d0;
   }
@@ -568,4 +555,3 @@ footer nav ul {
     margin-top: 30px;
 	cursor: pointer;
   }
-

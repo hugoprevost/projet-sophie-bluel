@@ -44,28 +44,28 @@
 		</article>
 	</section>
 	<section id="ajout">
-		<div id="ajout-content">
+		<div id="ajout-contenu">
 		  <h2>Galerie photo</h2>
-		  <div class="gallery-ajout"></div>
+		  <div class="gallerie-ajout"></div>
 		  <button id="fermerAjout"><i class="fa-solid fa-xmark"></i></button>
-		  <button type="button" id="new-photo">Ajouter une photo</button>
+		  <button type="button" id="nouvelle-photo">Ajouter une photo</button>
 		</div>
 		<div id="ajout-photo" style="display : none;">
 			<h2>Ajout photo</h2>
 			<form enctype="multipart/form-data" method="POST">
-				<div id="form-photo-div">
-					<i class="fa-regular fa-image" id="iModalImage" style="color: #c5c6c9;"></i>
-				    <label for="image" id="label-image">+ Ajouter une photo</label>
+				<div id="formulaire-photo">
+					<i class="fa-regular fa-image" id="iImage" style="color: #c5c6c9;"></i>
+				    <label for="image" id="ajout-image">+ Ajouter une photo</label>
 				    <input type="file" name="image" id="image" style="display: none;">
-					<p>jpg,png : 4mo max</p>
+					<p>jpg,png : 4mo maximum</p>
 			    </div>
 				<div class="ajout-photo-input">
 				    <label for="title">Titre</label>
-				    <input type="text" name="title" id="ajout-photo-titre">
+				    <input type="text" name="title" id="photo-titre">
 			    </div>
-				<div class="ajout-photo-input" id="barre-grise">
-				    <label for="category">Catégorie</label>
-				    <select name="category" id="photo-category">
+				<div class="ajout-photo-input" id="barre">
+				    <label for="categori">Catégorie</label>
+				    <select name="categori" id="photo-categori">
 						<option value="" selected></option>
 						<option value="1">Objets</option>
 						<option value="2">Appartements</option>
@@ -75,7 +75,7 @@
 				<input type="submit" value="Valider" id="ajout-valider">
 			</form>
 			<button id="fermerAjout2"><i class="fa-solid fa-xmark"></i></button>
-			<button id="ajout-return"><i class="fa-solid fa-arrow-left"></i></button>
+			<button id="ajout-retour"><i class="fa-solid fa-arrow-left"></i></button>
 		</div>
 	  </section>
 	<section id="portfolio">
