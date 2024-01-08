@@ -72,15 +72,21 @@ function encartAjoutProjet(work) {
   return creationFigure
 }
 
+const works = [];
 fetch('http://localhost:5678/api/works')
   .then((response) => response.json())
   .then((data) => {
-    data.forEach((work) => {
+    displayWorks(data)
+    works = data
+  })
+
+  function displayWorks(works){
+    encartGallerieAjout.innerHTML=''
+    works.forEach((work) => {
       const creationFigure = encartAjoutProjet(work)
       encartGallerieAjout.appendChild(creationFigure)
     })
-  })
-
+  }
 
   function supressionProjet(workId) {
   const identification = sessionStorage.getItem("Token")
@@ -97,13 +103,10 @@ fetch('http://localhost:5678/api/works')
       if (!response.ok){
       throw new error ('La supression du travai à échoué.')
     }
-    const suppressionProjet = document.querySelector(`figure[data-id="${workId}"]`)
-    if (suppressionProjet) {
-      suppressionProjet.remove()
-    } 
+    const presentWorks = works.filter((work)=> work.id !== workId)
+    displayWorks(presentWorks);
   })
   .catch(error => console.error(error))
-  alert('Le projet a été supprimé avec succès.')
   }
 }  
 
