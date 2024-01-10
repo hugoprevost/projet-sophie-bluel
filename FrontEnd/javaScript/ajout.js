@@ -203,7 +203,7 @@ function ajoutNouveauProjet(event) {
   .then(response => response.json()) 
   .then(work => {
     //ajout du projet dans la gallerie
-    const creationFigure = createWorkFigure(work)
+    const creationFigure = creationBlockProjet(work)
     const gallerie = document.querySelector('.gallery')
     gallerie.appendChild(creationFigure)
   
@@ -213,7 +213,8 @@ function ajoutNouveauProjet(event) {
     gallerieAjout.appendChild(encartProjet) 
   })
   .catch(error => console.error(error));
-  alert('Le nouveau projet a été ajouté avec succès.')
+  ajoutProjet.style.display = 'flex'
+  ajoutPhoto.style.display = 'none'
 }
 
 //affichage image aperçu
