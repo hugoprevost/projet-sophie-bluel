@@ -3,6 +3,36 @@ const ajoutProjet = document.querySelector('#ajout-contenu')
 const ajoutPhoto = document.querySelector('#ajout-photo')
 const fermer = document.querySelector('#fermerAjout')
 
+function creationBlockProjet(work) {
+  const projet = document.createElement('figure')
+  const projetCap = document.createElement('figcaption')
+  const projetImage = document.createElement('img')
+
+  projetImage.src = work.imageUrl
+  projetImage.alt = work.title
+  projetCap.innerHTML = work.title
+  projet.setAttribute('data-id', work.id);
+  projet.setAttribute('category-id', work.categoryId)
+  
+  projet.appendChild(projetImage)
+  projet.appendChild(projetCap)    
+
+  return projet
+}
+
+fetch('http://localhost:5678/api/works')
+  .then((response) => response.json())
+  .then((data) => {
+    affichageProjectsPageAccueil(data)
+  })
+
+function affichageProjectsPageAccueil(works){
+  blockImage.innerHTML = ''
+  works.forEach((work) => {
+    const projet = creationBlockProjet(work)
+    blockImage.appendChild(projet)
+  })
+}
 
 function affichageAjout() {
     ajout.style.display = 'block'
@@ -72,12 +102,12 @@ function encartAjoutProjet(work) {
   return creationFigure
 }
 
-const works = [];
+let works = [];
 fetch('http://localhost:5678/api/works')
   .then((response) => response.json())
   .then((data) => {
-    displayWorks(data)
     works = data
+    displayWorks(data)
   })
 
   function displayWorks(works){
@@ -105,6 +135,7 @@ fetch('http://localhost:5678/api/works')
     }
     const presentWorks = works.filter((work)=> work.id !== workId)
     displayWorks(presentWorks);
+    affichageProjectsPageAccueil(presentWorks)
   })
   .catch(error => console.error(error))
   }
